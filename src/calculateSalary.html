@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Salary</title>
+    <script src="./utils/input.js"></script>
+    <script src="./constants/calculateSalary.js"></script>
+    <script src="./constants/errors.js"></script>
+    <script src="./functions/calculateSalary.js"></script>
+    <link rel="stylesheet" href="./styles/calculateSalary.css" />
+  </head>
+  <body>
+    <div id="container">
+      <main id="form-container">
+        <h1 id="form-title">Calcular salário</h1>
+        <form id="form-calculate-salary" onsubmit="showResult(event)">
+          <div class="input-external-container">
+            <label class="input-label">Salário mínimo</label>
+            <input class="input-container" type="text" id="minimumSalary" />
+          </div>
+          <div class="input-external-container">
+            <label class="input-label">Horas trabalhadas</label>
+            <input class="input-container" type="text" id="workHours" />
+          </div>
+          <div class="input-external-container">
+            <label class="input-label">Horas extras trabalhadas</label>
+            <input class="input-container" type="text" id="extrasHours" />
+          </div>
+
+          <button id="submit-button" type="submit">Calcular</button>
+        </form>
+
+        <div id="result-container" style="visibility: hidden">
+          <p>Resultado: <span id="result-text-value">810</span></p>
+        </div>
+
+        <div id="error-container" style="visibility: hidden">
+          <p id="error-text-value">required workHours</p>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <script src="./main.js"></script>
+</html>
